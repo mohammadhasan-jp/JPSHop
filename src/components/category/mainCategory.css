@@ -1,0 +1,35 @@
+.card{
+    width: 25%;
+    height: 30rem;
+
+    border-radius: 0.5rem;
+    margin: 0.5rem; 
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    
+}
+.card img{
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.card h1{
+  font-size:20px;
+  margin: 0.5rem;
+}
+.card p{
+    font-size: 15px;
+    margin: 0.5rem;
+}
+
+.available{
+    background-color: #22c55e;
+    bottom: 0;
+    position: absolute;
+}
+.notAvailable{
+    background-color: #dc2626;
+    bottom: 0;
+    position: absolute;
+}

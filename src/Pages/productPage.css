@@ -1,0 +1,25 @@
+.ratingStar{
+    direction: ltr;
+}
+
+.maderboard{
+    background-color: #e09696;
+}
+.keyboard{
+    background-color: #abddfb;
+}
+.rams{
+    background-color: #dec79e;
+}
+.monitor{
+    background-color: #afe3a7;
+}
+.caseicon{
+    background-color: #cdb2e7;
+}
+.ps5{
+    background-color: #d3dea8;
+}
+.hoverBorder :hover{
+    border: 1px solid #0277BD;
+}

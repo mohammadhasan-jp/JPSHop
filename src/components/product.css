@@ -1,0 +1,53 @@
+.from-black{
+    --tw-gradient-from: rgb(0 0 0 / .9) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+.to-black\/70 {
+    --tw-gradient-to: rgb(0 0 0 / .7) var(--tw-gradient-to-position);
+}
+.product-group-card1{
+    background: rgb(2,0,36);
+background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,121,121,1) 0%, rgba(46,43,43,1) 100%, rgba(0,0,0,0.8743872549019608) 100%);
+background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,121,121,1) 0%, rgba(46,43,43,1) 100%, rgba(0,0,0,0.8743872549019608) 100%);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(125,121,121,1) 0%, rgba(46,43,43,1) 100%, rgba(0,0,0,0.8743872549019608) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#000000",GradientType=1);
+}
+
+.product-group-card2{
+    background: rgb(34,193,195);
+background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(239,252,157,1) 0%, rgba(254,142,6,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(239,252,157,1) 0%, rgba(254,142,6,1) 100%);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(239,252,157,1) 0%, rgba(254,142,6,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#fe8e06",GradientType=1);
+}
+.product-group-card3{
+    background: rgb(34,193,195);
+background: -moz-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(233,192,192,1) 0%, rgba(233,6,6,1) 80%, rgba(255,0,0,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(233,192,192,1) 0%, rgba(233,6,6,1) 80%, rgba(255,0,0,1) 100%);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(233,192,192,1) 0%, rgba(233,6,6,1) 80%, rgba(255,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#22c1c3",endColorstr="#ff0000",GradientType=1);
+}
+.product-group-card4{
+    background: rgb(179,156,156);
+background: -moz-linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(232,233,233,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(232,233,233,1) 100%);
+background: linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(232,233,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b39c9c",endColorstr="#e8e9e9",GradientType=1);
+}
+
+.product-group-card5{
+    background: rgb(179,156,156);
+background: -moz-linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(40,233,62,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(40,233,62,1) 100%);
+background: linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(40,233,62,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b39c9c",endColorstr="#28e93e",GradientType=1);
+}
+.product-group-card6
+{
+    background: rgb(179,156,156);
+    background: -moz-linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(1,103,203,1) 0%);
+    background: -webkit-linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(1,103,203,1) 0%);
+    background: linear-gradient(0deg, rgba(179,156,156,1) 0%, rgba(233,6,6,1) 0%, rgba(181,165,165,1) 0%, rgba(34,193,195,1) 0%, rgba(181,179,179,1) 0%, rgba(1,103,203,1) 0%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b39c9c",endColorstr="#0167cb",GradientType=1);
+}

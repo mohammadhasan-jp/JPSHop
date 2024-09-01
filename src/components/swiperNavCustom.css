@@ -1,0 +1,36 @@
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+}
+
+.custom-swiper-button-prev:hover,
+.custom-swiper-button-next:hover {
+  transform: scale(1.1);
+}
+
+.custom-swiper-button-prev {
+  left: -20px;
+}
+
+.custom-swiper-button-next {
+  right: -20px;
+}
+
+.custom-swiper-button-prev svg,
+.custom-swiper-button-next svg {
+  width: 20px;
+  height: 20px;
+  color: #333;
+}
