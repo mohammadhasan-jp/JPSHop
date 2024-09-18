@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
@@ -44,6 +45,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
+import SwiperProductComp from "../components/SwiperProductComp";
 const products = [
   {
     1: "gigabyte",
@@ -110,7 +112,7 @@ const products = [
     company: razerLogo,
   },
 ];
-function ProductPage() {
+function ProductPage(props) {
   const [count, setCount] = useState(1);
 
   function itemCountLimit() {
@@ -132,9 +134,13 @@ function ProductPage() {
   function showImgBox() {
     return <p className=" absolute m-auto ">dad</p>;
   }
+  
+ /*  دریافت اطلاعات محصول از  */
+  const { state } = useLocation(); 
+
   return (
     <div className="m-auto py-12 ">
-      <div className="m-auto ">
+      <div className="m-auto container">
         <div className="grid grid-cols-12">
           {/*  product image section */}
           <div className="xl:col-span-5 col-span-12 ">
@@ -290,7 +296,7 @@ function ProductPage() {
             </nav>
             <div className="py-4">
               <h1 className="font-bold text-2xl lg:text-4xl text-gray-800">
-                مانیتور GIGABYTE GS27F
+             
               </h1>
             </div>
             <div className="grid grid-cols-2 ">
@@ -691,58 +697,8 @@ function ProductPage() {
             </p>
           </div>
 
-          <div className="">
-            {/*  most product section added */}
-            <Swiper
-          
-              breakpoints={{
-                576: {
-                  // width: 576,
-                  slidesPerView: 2,
-                },
-                768: {
-                  // width: 768,
-                  slidesPerView: 3,
-                },
-                1400: {
-                  slidesPerView: 4,
-                },
-              }}
-             
-    
-
-              
-              
-      
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-            
-              className="mySwiper  "
-            >
-              {products.map((product) => (
-                <SwiperSlide key={product.id} className="card  border rounded-2xl  bg-white hover:shadow-xl h-full py-10   duration-300  max-w-[20rem] px-2 hover:border-primary">
-                  <a className=" px-7 text-center " href="">
-                    {
-                     product.like===true?<FaHeart className="text-2xl text-secondary hover:scale-125 duration-150 -translate-y-4"/>:<FaRegHeart   className="text-2xl  hover:scale-125 duration-150 -translate-y-4 "/>
-                     
-                    }
-                   
-                    <div className="img w-full text-center max-h-[12rem] " >
-                      <img src={product.img} className="object-contain w-auto " alt="" />
-                    </div>
-                    <div className="title flex items-center pt-12">
-                      <p className="text-xl font-bold mx-4 w-full text-ellipsis inline-block h-20">{product.name}</p>
-                    </div>
-                    <div className="add_to_cart price flex items-center justify-between text-2xl">
-                    <button><FiPlus className="text-3xl hover:scale-125 duration-150" /></button>
-                      <span className="text-xl font-bold mx-4"> {product.price} ت </span>
-                      
-                    </div>
-
-                  </a>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+          <div className="w-full">
+        <SwiperProductComp/>
           </div>
         </div>
       </div>

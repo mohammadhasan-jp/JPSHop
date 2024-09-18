@@ -34,7 +34,7 @@ function MostSaleProduct() {
            </button>
           </div>
 
-          <div className="container">
+          <div className="m-auto">
               <SwiperProductComp/>
           </div>
         </div>

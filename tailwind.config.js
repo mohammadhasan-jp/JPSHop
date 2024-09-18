@@ -11,6 +11,7 @@ export default withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
     "path-to-your-node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
     "path-to-your-node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
+    'node_modules/preline/dist/*.js',
     
     
     
@@ -65,6 +66,7 @@ export default withMT({
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
+      '3xl':'2000px',
         },
       },
       
@@ -76,6 +78,7 @@ export default withMT({
     require('tailwind-scrollbar')({ nocompatible: true }),
     require('daisyui'),
     flowbite.plugin(),
+    require('preline/plugin'),
     
 
     

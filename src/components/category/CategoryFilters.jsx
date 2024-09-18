@@ -131,7 +131,7 @@ function CategoryFilters() {
                 filter.items.map((item)=>(
                   <label className="label cursor-pointer  px-6">
                   <input type="checkbox"  className="checkbox   checkbox-md text-4xl  checkbox-info "  />
-                  <span className="label-text text- 2xl:text-lg text-gray-600">{item.name}</span>
+                  <span className="label-text text-xs 2xl:text-lg text-gray-600">{item.name}</span>
                 </label>
                 ))
               }

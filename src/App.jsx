@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes,useLocation } from "react-router-dom";
+import { useState,useRef ,useEffect} from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Header from "./components/Header";
@@ -20,6 +20,8 @@ import FullSetupProducts from "./components/FullSetupProducts.jsx";
 import NavbarMobile from "./components/NavbarMobile.jsx";
 import Home from "./Pages/Home.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import Login from "./Pages/Login.jsx";
+import { motion, useScroll } from "framer-motion"
 // ..
 AOS.init({
   // Global settings:
@@ -41,42 +43,51 @@ AOS.init({
   mirror: false, // whether elements should animate out while scrolling past them
   anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
 });
-function App() {
+function Layout() {
+  const location = useLocation(); // مسیر فعلی را می‌گیرد
+  const scrollRef = useRef(null)
+  const [isMenuVisible, setMenuVisible] = useState(false);
+
+
   return (
     <>
-     
-        
-          
-        <Router>
-          <ScrollToTop/>
-        <div className="  w-full sticky top-0  shadow-lg  rounded-md   z-40">
-          <section className="header   bg-white  lg:px-10  p-4 m-auto   ">
-            <Header className="" />
+  
+      <ScrollToTop />
+      {location.pathname !== "/login" && (
+        <div className="w-full sticky top-0 shadow-lg rounded-md z-40">
+          <section className="header bg-white lg:px-10 p-4 m-auto">
+            <Header isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} />
           </section>
         </div>
-        <div className="bg_body px-1 container box-border">
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/category" element={<Category />} />
-              <Route
-                path="/products/ProductPage"
-                element={
-                  <div className="container ">
-                    <ProductPage />
-                  </div>
-                }
-              />
-            </Routes>
-          </main>
-        </div>
+      )}
+
+      <div  id="body" className={location.pathname!=="/login"? "bg_bodybox-border container ":"bg_bodybox-border "}>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/products/ProductPage" element={<ProductPage />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+        </main>
+      </div>
+
+ 
+      {location.pathname !== "/login" && (
+        <>
           <Footer />
-        </Router>
-      
           <NavbarMobile />
-     
-  
+        </>
+      )}
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
   );
 }
 

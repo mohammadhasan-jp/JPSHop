@@ -1,22 +1,14 @@
 import { MenuItems } from "@headlessui/react";
 import React from "react";
+import { useState } from "react";
 import { HiOutlineLogin } from "react-icons/hi";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaBars } from "react-icons/fa";
 import jpShopLogo from "../assets/jpShopLogo.png";
 import no_search from '../assets/no-search.webp'
 import { HiOutlineBars3BottomLeft } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
-function GroupingNavitemstrue() {
-  var group_list = document.querySelector(".group_list");
-  group_list.className = "w-full left-0 right-0 group_list   absolute bg-white";
-}
-
-function GroupingNavitemsfalse() {
-  var group_list = document.querySelector(".group_list");
-  group_list.className =
-    "w-full left-0 right-0  group_list  hidden   bg-white absolute";
-}
 
 const linksItems = [
   {
@@ -83,10 +75,20 @@ const GroupingNav = [
     name: "هدست واقعیت مجازی",
   },
 ];
-function Header() {
+function Header({isMenuVisible ,setMenuVisible}) {
+  function GroupingNavitemstrue() {
+    setMenuVisible(true);
+
+  }
+  
+  function GroupingNavitemsfalse() {
+    setMenuVisible(false);
+
+  }
+  
   return (
     <div className="header  ">
-      <div className="  ">
+      <div className="container">
         <div className=" m-auto flex justify-between items-center ">
           <div className="logo links flex items-center justify-between w-1/2 px-10">
             {/*  logo and links */}
@@ -172,9 +174,9 @@ function Header() {
           <div className="login cart flex justify-between items-center   gap-6">
             {/*  login and cart */}
             <div className="text-gray-500 hover:text-primary duration-200 dark:text-gray-400 inline-block ">
-              <a href="">
+              <Link to={"/login"}>
                 <HiOutlineLogin size={25} />
-              </a>
+              </Link>
             </div>
             <div className="cart text-gray-500 hover:text-primary duration-200 dark:text-gray-400 inline-block">
               <a href="">
@@ -186,8 +188,10 @@ function Header() {
           </div>
         </div>
         {/* navigate group items */}
-        <div onMouseLeave={GroupingNavitemsfalse} className="group_list hidden  ">
-          <ul className="grid gap-3 lg:px-[1rem] pt-28  py-5 ">
+        {
+          isMenuVisible?(
+            <div onMouseLeave={GroupingNavitemsfalse} className="group_list  absolute  container ">
+          <ul className="grid gap-3 lg:px-[1rem] pt-28  py-5   bg-white  rounded-2xl border-b-3 border-primary">
             {GroupingNav.map((item) => (
               <li className="font-semibold text-base text-gray-700 lg:mr-3 xl:mr-20 mx-5   hover:bg-primary hover:text-white p-2 rounded-lg duration-300 ">
                 <a className="w-auto" href={item.link}>
@@ -197,6 +201,8 @@ function Header() {
             ))}
           </ul>
         </div>
+          ):null
+        }
         <div className="links mr-2  xl:flex pt-10  w-full justify-between hidden">
           <ul className="flex  relative gap-2 lg:gap-7 px-5  ">
             {

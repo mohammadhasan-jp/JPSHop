@@ -22,7 +22,6 @@ function DiscountProducts2() {
                 <div className='gap-4 grid px-5 text-start lg:w-2/6'> 
                     <p data-aos="fade-down" className='font-bold text-sm lg:text-xl  '>Smart Solo</p>
                     <h1 data-aos="fade-down" className=' text-2xl lg:text-4xl  form-control'>فروش زمستانی ! </h1>
-                  {/*   <p data-aos="fade-down" className='font-bold text-sm py-3'> تو زمستون سرد یه آهنگ گرم می چسبه </p> */}
                     <button className='w-36 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:bg-white duration-300 text-white px-3 py-2 rounded-md font-semibold'>مشاهده همه</button>
                     
                 </div>
