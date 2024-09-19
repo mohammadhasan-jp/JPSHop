@@ -100,9 +100,12 @@ function FullSetupProducts() {
           },
           768: {
             // width: 768,
-            slidesPerView: 2,
+            slidesPerView: 1,
           },
           1400: {
+            slidesPerView: 2,
+          },
+          1800: {
             slidesPerView: 3,
           },
         }}

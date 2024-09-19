@@ -47,6 +47,7 @@ function Layout() {
   const location = useLocation(); // مسیر فعلی را می‌گیرد
   const scrollRef = useRef(null)
   const [isMenuVisible, setMenuVisible] = useState(false);
+  const [cartValue, setCartValue] = useState(1)
 
 
   return (
@@ -56,7 +57,7 @@ function Layout() {
       {location.pathname !== "/login" && (
         <div className="w-full sticky top-0 shadow-lg rounded-md z-40">
           <section className="header bg-white lg:px-10 p-4 m-auto">
-            <Header isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible} />
+            <Header isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}  cartValue={cartValue} setCartValue={setCartValue}/>
           </section>
         </div>
       )}

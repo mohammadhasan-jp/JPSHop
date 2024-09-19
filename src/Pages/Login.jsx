@@ -19,32 +19,34 @@ function Login() {
   const [pin, setPin] = useState(["", "", "", "", "", ""]);
   const inputRef = useRef(null);
   const [mobileError , setMobileError] = useState(false)
-  const pins = [1, 2, 3, 4, 5, 6];
+  const pins = [1, 2, 3, 4, 5];
   const [loginFrom,setLoginForm] = useState(false)
   const [testPass , setTestPass] = useState(false)
+  const [numberPass, setNumberPass]=useState(false);
+  const [charPass,setCharPass] =useState(false)
 
   const handleLogin = async () => {
     let irPhoneNumber = /^09\d{9}$/;
     if (irPhoneNumber.test(inputRef.current.value)) {
       setLoading(true);
-      setInterval(() => {
+      setTimeout(() => {
         setLoading(false);
         setCodeSent(true);
       }, 3000);
-      clearInterval();
+    
       setMobileError(false)
     }else{
       setMobileError(true)
 
     }
   };
+
   const handleLoginForm = async ()=>{
     setLoading(true); 
-    setInterval(() => {
-      setLoginForm(true);
-      setLoading(false);
-    }, 3000);
-    clearInterval();
+    setTimeout(() => {
+      setLoginForm(true); // نمایش فرم ورود
+      setLoading(false); // پایان لودینگ
+    }, 3000); 
 
   }
   const savePhoneNumber = () => {
@@ -73,12 +75,21 @@ function Login() {
   };
 
   const testPassword=()=>{
-    const value=inputRef.current.value;
-    if (/^\w{6}?$/.test(value)) {
-      setTestPass(false)
+    const value = inputRef.current.value;
+    const minLength = 6;
+    const hasNumber = /\d/;
 
-    }else{
-      setTestPass(true)
+    if (!hasNumber.test(value)) {
+      setTestPass(true);
+      setNumberPass(true)
+    } else if (value.length < minLength) {
+      setTestPass(true);
+      setCharPass(true);
+      setNumberPass(false);
+    } else {
+      setTestPass(false);
+      setNumberPass(false);
+      setCharPass(false);;
     }
 
   }
@@ -90,7 +101,7 @@ function Login() {
           <div className="col-span-10 2xl:col-span-3 h-screen bg-primary 2xl:bg-brandWhite">
             <div className="h-full w-full flex justify-center items-center  px-3  ">
               <div className="border rounded-3xl 2xl:-translate-x-96  ">
-                <div className="flex w-[30rem] 2xl:w-[31rem] ">
+                <div className="flex w-[25rem] md:w-[30rem] 2xl:w-[36rem] ">
                   <Card className="container py-10">
                     <CardHeader className="py-5">
                       <h3 className=" w-full font-bold  text-center text-primary  text-4xl">
@@ -112,14 +123,16 @@ function Login() {
                             className={` px-7 w-full mainInput my-3 text-xl    bg-brandWhite rounded-2xl py-5    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
                             type="text"
                           />
+                            <div className="">
                           {
                             mobileError?(
-                              <p className="text-center pb-2 text-red-600 font-semibold  ">
+                                <p data-aos="fade-down" className=" p-2 mx-1 w-64 text-start bg-red-500 text-white rounded-md pb-2  font-semibold  my-2 ">
                             شماره موبایل را درست وارد کنید
                           </p>
                             ):null
                           }
-                          <p className="rools px-1 text-start  font-semibold ">
+                          </div>
+                          <p className="rools px-1 text-start  font-semibold  text-lg py-1">
                             ورود شما به معنای پذیرش{" "}
                             <a href="" className="text-primary">
                               شرایط جی پی شاپ
@@ -157,7 +170,7 @@ function Login() {
                                 maxLength={1}
                                 onChange={(e) => handlePinChange(e, index)}
                                 onKeyDown={(e) => handleBackspace(e, index)}
-                                className="block  focus:shadow-lg w-[60px] h-[70px] text-center rounded-3xl  border-gray-300 text-sm focus:border-blue-500 focus:ring-blue-500"
+                                className="block  focus:shadow-lg w-[60px] h-[70px] text-center rounded-3xl  border-gray-300 text-sm focus:border-blue-500 focus:ring-blue-500 font-semibold "
                                 dir="ltr"
                                 autoFocus={index == 6}
                                 data-aos="fade-down"
@@ -184,13 +197,20 @@ function Login() {
                             ref={inputRef}
                             dir="ltr"
                             className={` px-7 w-full mainInput my-3 text-xl    bg-brandWhite rounded-2xl py-5    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
-                            type="text"
+                            type="password"
                             data-aos="fade-down"
                             onChange={testPassword}
                           />
 
-                          {testPass?(
-                            <p>dasd</p>
+                          {testPass?( 
+                            <div className="h-auto border text-start p-2  border-red-600 rounded-md bg-red-500  font-semibold duration-100 shadow-lg text-white  px-3 my-2 w-72 mx-1">
+                              {charPass?( 
+                                <p  className="py-1" data-aos="fade-down">پسورد باید حداقل 6 کارکتر داشته باشد</p>
+                              ):null}
+                              {numberPass?(
+                                <p  data-aos="fade-down" >پسورد باید حداقل یک عدد داشته باشد</p>
+                              ):null}
+                            </div>
                           ):null
                         }
                         

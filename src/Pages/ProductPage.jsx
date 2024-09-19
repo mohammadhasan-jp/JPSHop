@@ -46,6 +46,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import SwiperProductComp from "../components/SwiperProductComp";
+import { FaCartArrowDown } from "react-icons/fa";
 const products = [
   {
     1: "gigabyte",
@@ -405,8 +406,9 @@ function ProductPage(props) {
                     </div>
                     {/*  payment button */}
                     <div className=" ">
-                      <button className=" btn  bg-primary  text-base  hover:bg-primary text-white px-20  py-3 rounded-md  ">
-                        افزودن به سبد خرید
+                      <button className=" btn  bg-primary  text-base  hover:bg-primary text-white px-16  py-6   content-center items-center rounded-md  ">
+                        <span>افزودن به سبد خرید</span>
+                        <span><FaCartArrowDown size={22} /></span>
                       </button>
                     </div>
                     {/*  payment button  */}

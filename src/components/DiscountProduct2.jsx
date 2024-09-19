@@ -15,7 +15,7 @@ function DiscountProducts2() {
                 </div>
                 {/* Discount photo */}
                 <div className='grid lg:w-4/6' data-aos="zoom-in">
-                    <img className=' m-auto object-cover object-center h-[30rem] bg-no-repeat' src={product} alt="discount" />
+                    <img className=' m-auto object-cover object-center h-[27rem] bg-no-repeat' src={product} alt="discount" />
                 </div>
                 
                 {/* Discount photo */}

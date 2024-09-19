@@ -126,9 +126,16 @@ function SwiperProductComp({}) {
           },
           768: {
             // width: 768,
-            slidesPerView: 4,
+            slidesPerView: 2,
+          },
+          900: {
+            // width: 768,
+            slidesPerView: 3,
           },
           1400: {
+            slidesPerView: 5,
+          },
+          1900: {
             slidesPerView: 6,
           },
         }}
