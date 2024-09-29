@@ -117,11 +117,11 @@ function Login() {
       <div className="max-w-full h-full">
         <div className="grid grid-cols-10">
           {/*  main login section */}
-          <div className="col-span-10 2xl:col-span-3 h-screen bg-primary 2xl:bg-brandWhite">
+          <div className="col-span-10 2xl:col-span-3 h-screen bg-white 2xl:bg-brandWhite">
             <div className="h-full w-full flex justify-center items-center  px-3  ">
-              <div className="border rounded-3xl 2xl:-translate-x-72  ">
+              <div className="xl:border  rounded-3xl 2xl:-translate-x-72  ">
                 <div className="flex w-[28rem]">
-                  <Card className=" px-[1rem] py-10 w-full">
+                  <Card className="shadow-none 2xl:shadow-md px-[1rem] py-10 w-full">
                     <CardHeader className="py-5">
                       <h3 className=" w-full font-bold  text-center text-primary  text-3xl">
                         JPsHOP
@@ -139,7 +139,7 @@ function Login() {
                           <input
                             ref={inputRef}
                             dir="ltr"
-                            className={` px-7 w-full mainInput my-3 text-base    bg-brandWhite rounded-2xl py-5    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
+                            className={` px-7 w-full mainInput my-3 text-base    bg-brandWhite rounded-2xl py-4   focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
                             type="text"
                           />
                           <div className="">
@@ -152,7 +152,7 @@ function Login() {
                               </p>
                             ) : null}
                           </div>
-                          <p className="rools px-1 text-start  font-semibold  text-base py-1">
+                          <p className="rools px-1 text-start  font-semibold  text-sm py-1">
                             ورود شما به معنای پذیرش{" "}
                             <a href="" className="text-primary">
                               شرایط جی پی شاپ
@@ -205,7 +205,7 @@ function Login() {
                           <input
                             ref={inputRef}
                             dir="ltr"
-                            className={` px-7 w-full mainInput my-3 text-xl    bg-brandWhite rounded-2xl py-5    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
+                            className={` px-7 w-full mainInput my-3 text-xl    bg-brandWhite rounded-2xl py-4    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
                             type="text"
                             data-aos="fade-down"
                           />
@@ -217,9 +217,10 @@ function Login() {
                         <input
                             ref={inputRef}
                             dir="ltr"
-                            className={` px-7 w-full mainInput my-3 text-xl  z-10   bg-brandWhite rounded-2xl py-5    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
+                            className={` px-7 w-full mainInput my-3 text-xl  z-10   bg-brandWhite rounded-2xl py-4    focus:drop-shadow-xl  border-transparent focus:ring-0  focus:bg-white    focus:shadow-md  focus:shadow-primary-400 duration-200 `}
                             type={type}
                             onChange={testPassword}
+                            data-aos="fade-down"
                           />
                           <span className="absolute z-30 inline-block  mr-4 cursor-pointer">
                             {showPassword ? (
@@ -309,10 +310,10 @@ function Login() {
           <div className="hidden 2xl:block 2xl:col-span-7 bg-primary h-screen w-full  rounded-r-3xl">
             <div className="text-center content-center h-full">
               <div className="py-6">
-                <ul className="steps steps-vertical lg:steps-horizontal text-xl font-semibold text-brandWhite">
-                  <li className="step step-primary">احراز هویت</li>
-                  <li className="step step-primary">تکمیل اطلاعات شخص</li>
-                  <li className="step">تکمیل خرید</li>
+                <ul className="steps steps-vertical lg:steps-horizontal font-semibold   text-brandWhite">
+                  <li className="step step-neutral text-base">احراز هویت</li>
+                  <li className="step text-base">تکمیل اطلاعات شخص</li>
+                  <li className="step text-base">تکمیل خرید</li>
                 </ul>
               </div>
               <p className="font-semibold text-brandWhite">

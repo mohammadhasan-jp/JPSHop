@@ -136,11 +136,11 @@ function FullSetupProducts() {
                   </p>
 
                   <div className="details pt-7 px-1 rounded-sm p-2">
-                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between border-b-1 font-semibold py-1 "><span className="cpu text-white">پردازنده :</span><span className="text-sm content-center text-white">{product.cpu}</span></p>
-                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1  bg-gray-600 flex justify-between border-b-1 font-semibold py-1"><span className="gpu text-white"> کارت گرفایک :</span><span className="text-sm  content-center text-white">{product.gpu}</span></p>
-                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between border-b-1 font-semibold py-1"><span className="ram w-3/4 text-start text-white">رم :</span><span className="text-sm content-center text-white">{product.ram}</span></p>
-                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between border-b-1 font-semibold py-1"><span className="motherBoard text-white">مادربرد :</span><span className="text-sm content-center text-white">{product.motherBoard}</span></p>
-                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between font-semibold py-1"><span className="cooling text-white">سیستم خنک کننده :</span><span className="text-sm content-center text-white">{product.cooling}</span></p>
+                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between border-b-1 font-semibold py-1 "><span className="cpu text-white text-sm ">پردازنده :</span><span className="text-xs content-center text-white">{product.cpu}</span></p>
+                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1  bg-gray-600 flex justify-between border-b-1 font-semibold py-1"><span className="gpu text-white  text-sm"> کارت گرافیک :</span><span className="text-xs  content-center text-white">{product.gpu}</span></p>
+                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between border-b-1 font-semibold py-1"><span className="ram  text-start text-white text-sm">رم :</span><span className="text-xs content-center text-white w-3/4">{product.ram}</span></p>
+                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between border-b-1 font-semibold py-1"><span className="motherBoard text-white text-sm">مادربرد :</span><span className="text-xs content-center text-white w-3/4">{product.motherBoard}</span></p>
+                    <p className="px-2 w-full bg-gradient-to-r rounded-md my-1 bg-gray-600  flex justify-between font-semibold py-1"><span className="cooling text-white text-sm">سیستم خنک کننده :</span><span className="text-xs content-center text-white">{product.cooling}</span></p>
 
                   </div>
                 </CardBody>

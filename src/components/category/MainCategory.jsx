@@ -290,9 +290,9 @@ function mainCategory() {
               {products.map((product, index) => (
                 <Card
                   id={index}
-                  className=" col-span-4 lg:col-span-2 2xl:col-span-1  hover:border-primary border-2 duration-300 "
+                  className=" col-span-4 lg:col-span-2 2xl:col-span-1  hover:border-primary border-1 duration-300 "
                 >
-                  <Link to={"/products/ProductPage"}>
+                  <Link to={"/products/ProductPage"} >
                     <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                       <div className="text-xl">
                         {product.id ? <FaRegHeart /> : <FaHeart />}
@@ -349,7 +349,9 @@ function mainCategory() {
               size={"full"}
               isOpen={isOpen}
               onClose={onClose}
-              className="p-5 bg-brandWhite 2xl:hidden block"
+              className="p-5 bg-brandWhite 2xl:hidden block overflow-scroll"
+              scrollBehavior="inside"
+             
             >
               <ModalContent>
                 {(onClose) => (
@@ -358,7 +360,7 @@ function mainCategory() {
                       فیلتر ها
                     </ModalHeader>
                     <ModalBody>
-                      <div className=" text-center rounded-2xl  w-full   ">
+                      <div className=" text-center rounded-2xl  w-full  overflow-y-auto">
                         <div className="w-full mx-auto px-4">
                           <div className=" text-center rounded-2xl  py-4 w-full   ">
                             {filters.map((filter) => (
@@ -384,13 +386,16 @@ function mainCategory() {
                           </div>
                         </div>
                       </div>
-                      <div className="filter-btn py-1   items-center flex justify-center  ">
+                     
+                    </ModalBody>
+                    <ModalFooter>
+                    <div className="filter-btn py-1   items-center flex justify-center w-full ">
                         <button className="btn  text-2xl hover:text-primary font-semibold px-[10rem] rounded-xl bg-primary text-white hover:bg-white duration-300 ">
                           فیلتر
-                          <Radio value="bottom-center">bottom-center</Radio>
+                        
                         </button>
                       </div>
-                    </ModalBody>
+                    </ModalFooter>
                   
                   </>
                 )}

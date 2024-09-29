@@ -77,7 +77,7 @@ function Layout() {
       {location.pathname !== "/login" && (
         <>
           <Footer />
-          <NavbarMobile  isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}  cartValue={cartValue} setCartValue={setCartValue}/>
+          <NavbarMobile   cartValue={cartValue} setCartValue={setCartValue}/>
         </>
       )}
     </>

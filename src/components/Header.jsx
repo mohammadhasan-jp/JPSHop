@@ -182,13 +182,13 @@ function Header({ isMenuVisible, setMenuVisible, setCartValue, cartValue }) {
           {/*  logo and links */}
           <div className="login cart flex justify-between items-center   gap-6 relative">
             {/*  login and cart */}
-            <div className="text-gray-500 hover:text-primary duration-200 dark:text-gray-400 inline-block ">
+            <div className="text-gray-500 hover:text-primary duration-200 dark:text-gray-400 hidden 2xl:block ">
               <Link to={"/login"}>
                 <HiOutlineLogin size={28} />
               </Link>
             </div>
 
-            <div className="cart text-gray-500 hover:text-primary duration-200 dark:text-gray-400 inline-block">
+            <div className="cart text-gray-500 hover:text-primary duration-200 dark:text-gray-400 hidden  2xl:block ">
               <a href="" onMouseEnter={() => setMiniCart(true)}>
                 <FaShoppingCart size={28} />
               </a>

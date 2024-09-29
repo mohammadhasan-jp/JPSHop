@@ -198,7 +198,7 @@ function ProductPage(props) {
                         onMouseLeave={restMainImg}
                         className="modal"
                       >
-                        <div className="modal-box ml-5">
+                        <div className="modal-box ml-5 bg-white">
                           <h3 className="font-bold text-lg">
                             مانیتور GIGABYTE GS27F
                           </h3>
@@ -256,7 +256,7 @@ function ProductPage(props) {
                       onClick={() =>
                         document.getElementById("my_modal_2").showModal()
                       }
-                      className="flex img_box   mx-2 justify-center -translate-y-10 md:-translate-y-16 2xl:-translate-y-24"
+                      className="flex img_box   mx-2 justify-center -translate-y-10 md:-translate-y-20 2xl:-translate-y-16"
                     >
                       <img
                         className="border hover:border-primary cursor-pointer mx-2  "
@@ -423,23 +423,23 @@ function ProductPage(props) {
           <div className="grid grid-cols-5 font-semibold  bg-secondary p-5 rounded-xl  ">
             <div className="2xl:flex gap-4   col-span-1  mx-auto items-center  ">
               <GoShieldLock className="text-primary xl:text-4xl text-xl   md:text-3xl mx-auto  duration-200" />
-              <span className=" text-[7px]  xl:text-lg   text-white">ضمانت اصالت کالا</span>
+              <span className=" text-[7px]  xl:text-base   text-white">ضمانت اصالت کالا</span>
             </div>
             <div className="2xl:flex gap-4  col-span-1  mx-auto  items-center  ">
               <MdOutlineSupportAgent className="text-primary xl:text-4xl md:text-3xl text-xl    mx-auto   duration-200" />
-              <span className="text-[7px]  xl:text-lg text-white">پشتیبانی آنلاین</span>
+              <span className="text-[7px]  xl:text-base text-white">پشتیبانی آنلاین</span>
             </div>
             <div className="2xl:flex gap-4 items-center   col-span-1  mx-auto ">
               <FaRegCreditCard className="text-primary xl:text-4xl md:text-3xl text-xl    mx-auto   duration-200" />
-              <span className="text-[7px]  xl:text-lg  text-white">پرداخت امن</span>
+              <span className="text-[7px]  xl:text-base  text-white">پرداخت امن</span>
             </div>
             <div className="2xl:flex gap-4 items-center   col-span-1 mx-auto ">
               <SlRocket className="text-primary xl:text-4xl md:text-3xl text-xl    mx-auto   duration-200" />
-              <span className="  text-[7px]  xl:text-lg  text-white">ارسال جی توربو</span>
+              <span className="  text-[7px]  xl:text-base  text-white">ارسال جی توربو</span>
             </div>
             <div className="2xl:flex gap-4 items-center  col-span-1 mx-auto  ">
               <TfiLoop className="text-primary xl:text-4xl md:text-3xl text-xl   mx-auto   duration-200" />
-              <span className=" xl:text-lg text-[7px]   text-white">امکان بازشگت کالا</span>
+              <span className="  text-[7px] xl:text-base  text-white">امکان بازشگت کالا</span>
             </div>
           </div>
         </div>
@@ -447,7 +447,7 @@ function ProductPage(props) {
         {/*  why us product */}
       </div>
       {/* payment card in mobile media query */}
-      <div className="md:hidden  w-screen left-0  fixed bottom-20 z-40  drop-shadow-2xl  ">
+      <div className="md:hidden  w-screen left-0  fixed bottom-20 z-40  drop-shadow-2xl pb-4  ">
         <div className="bg-white  justify-between  drop-shadow-2xl  px-5 pt-4 pb-7 content-center my-auto">
           <div className="flex  justify-between w-full  items-center border-b-2 p-4">
             <div className="font-bold my-auto ">
