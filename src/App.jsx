@@ -62,11 +62,11 @@ function Layout() {
         </div>
       )}
 
-      <div  id="body" className={location.pathname!=="/login"? "bg_bodybox-border container ":"bg_bodybox-border "}>
+      <div  id="body" className={location.pathname!=="/login"? "bg_bodybox-border container mx-auto   ":"bg_bodybox-border "}>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category" element={<Category />} />
+            <Route path="/category" element={<Category  />} />
             <Route path="/products/ProductPage" element={<ProductPage />} />
             <Route path="/login" element={<Login />} />
           </Routes>
@@ -77,7 +77,7 @@ function Layout() {
       {location.pathname !== "/login" && (
         <>
           <Footer />
-          <NavbarMobile />
+          <NavbarMobile  isMenuVisible={isMenuVisible} setMenuVisible={setMenuVisible}  cartValue={cartValue} setCartValue={setCartValue}/>
         </>
       )}
     </>

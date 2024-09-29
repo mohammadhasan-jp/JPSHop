@@ -5,6 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { MdHome } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { IoPersonSharp } from "react-icons/io5";
+import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, RadioGroup, Radio} from "@nextui-org/react";
 import { FaCartShopping } from "react-icons/fa6";
 const linksItems = [
   {
@@ -40,6 +41,8 @@ const linksItems = [
 ];
 
 function NavbarMobile() {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const [modalPlacement, setModalPlacement] = React.useState("auto");
   return (
     <div className="navbarMobile ">
       <div className=" xl:hidden  fixed bottom-0 z-40 py-3  flex w-screen justify-center bg-white rounded-sm shadow-2xl  drop-shadow-2xl">
@@ -47,9 +50,9 @@ function NavbarMobile() {
       
           <div className="navbarMobile__item mx-auto   cursor-pointer ">
             <div className="navbarMobile__link mx-auto w-full ">
-              <div className="wfull p-2 text-center      ">
+              <div className="wfull p-2 text-center      " onClick={onOpen}>
                 <div className="w-full px-3 py-2">
-                  <p className="text-xl - text-blue-500">{item.icon}</p>
+                  <p className="text-xl - text-blue-500 ">{item.icon}</p>
                 </div>
                 <div className="title text-xs ">
                   <p className="text-gray-500 font-semibold">{item.name}</p>
@@ -60,6 +63,39 @@ function NavbarMobile() {
         
         ))}
       </div>
+      <Modal 
+        isOpen={isOpen} 
+        placement="bottom"
+        onOpenChange={onOpenChange} 
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+              <ModalBody>
+                <p> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam pulvinar risus non risus hendrerit venenatis.
+                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam pulvinar risus non risus hendrerit venenatis.
+                  Pellentesque sit amet hendrerit risus, sed porttitor quam.
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+                <Button color="primary" onPress={onClose}>
+                  Action
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   );
 }

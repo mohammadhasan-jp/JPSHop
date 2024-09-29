@@ -120,23 +120,29 @@ function SwiperProductComp({}) {
       {/*  most product section added */}
       <Swiper
         breakpoints={{
+          // صفحه‌های کوچک (موبایل)
+          320: {
+            slidesPerView: 1,  // نمایش 1 محصول در عرض‌های بسیار کوچک (مانند گوشی‌های هوشمند)
+          },
+          // صفحه‌های متوسط (موبایل بزرگ و تبلت)
           576: {
-            // width: 576,
-            slidesPerView: 2,
+            slidesPerView: 2,  // نمایش 2 محصول در سایزهای بزرگتر از 576px
           },
+          // صفحه‌های متوسط به بالا (تبلت و دسکتاپ کوچک)
           768: {
-            // width: 768,
-            slidesPerView: 2,
+            slidesPerView: 2,  // نمایش 2 محصول در سایزهای بزرگتر از 768px
           },
-          900: {
-            // width: 768,
-            slidesPerView: 3,
+          // دسکتاپ کوچک
+          1024: {
+            slidesPerView: 3,  // نمایش 3 محصول در سایزهای بزرگتر از 1024px (لپ‌تاپ و دسکتاپ‌های کوچک)
           },
+          // دسکتاپ‌های بزرگ
+          1200: {
+            slidesPerView: 4,  // نمایش 4 محصول در سایزهای بزرگتر از 1200px
+          },
+          // صفحه‌های بسیار بزرگ (دسکتاپ‌های خیلی بزرگ)
           1400: {
-            slidesPerView: 5,
-          },
-          1900: {
-            slidesPerView: 6,
+            slidesPerView: 5,  // نمایش 5 محصول در سایزهای بزرگتر از 1400px
           },
         }}
         loop={false}
@@ -150,7 +156,7 @@ function SwiperProductComp({}) {
       >
         {products.map((product) => (
           <SwiperSlide key={product.id} className="">
-            <Card className=" skeleton hover:border-primary border-2 duration-300">
+            <Card className=" hover:border-primary border-1 duration-300">
               <Link to={{
                pathname: `/products/ProductPage`,
                state: { title: product.name }
@@ -159,13 +165,13 @@ function SwiperProductComp({}) {
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                   <div>{product.id ? <FaRegHeart /> : <FaHeart />}</div>
                 </CardHeader>
-                <CardBody className=" overflow-visible py-2 h-80">
+                <CardBody className=" overflow-visible py-2 md:h-72 h-auto ">
                   <Image
                     radius="lg"
                     src={product.img}
-                    className="w-full object-cover container  rounded-xl"
+                    className="w-full object-cover   rounded-xl p-2"
                   />
-                  <p className="text-base content-center font-semibold card-title px-4 pt-5 inline-block text-ellipsis text-gray-700 my-auto">
+                  <p className="text-base content-center font-semibold card-title px-4 pt-5  text-gray-700 my-auto overflow-hidden h-[4rem] line-clamp-2 text-start text-ellipsis">
                     {product.name}
                   </p>
                 </CardBody>

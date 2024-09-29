@@ -121,8 +121,8 @@ const filters=[
 function CategoryFilters() {
 
   return (
-    <div className="w-full mx-auto px-4">
-      <div className=" text-center rounded-2xl bg-white py-4 w-full   ">
+    <div className="w-full mx-auto px-2 mt-2">
+      <div className=" text-center rounded-2xl   w-[18rem] translate-x-14 ">
         {
           filters.map((filter)=>(
             <Accordion  title={filter.name} content={
@@ -143,8 +143,8 @@ function CategoryFilters() {
         }
     
     </div>
-    <div className="filter-btn py-6   items-center flex justify-center  ">
-        <button className="btn  text-2xl text-gray-600 font-semibold  w-full rounded-xl hover:bg-primary hover:text-white bg-white duration-300 ">فیلتر</button>
+    <div className="filter-btn py-2   items-center flex justify-center   translate-x-8">
+        <button className="btn   text-xl hover:text-primary font-semibold  w-[18rem] rounded-lg bg-primary text-white hover:bg-white duration-300 ">فیلتر</button>
       </div>
     </div>
   );

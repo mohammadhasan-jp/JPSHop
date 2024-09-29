@@ -184,54 +184,54 @@ function Header({ isMenuVisible, setMenuVisible, setCartValue, cartValue }) {
             {/*  login and cart */}
             <div className="text-gray-500 hover:text-primary duration-200 dark:text-gray-400 inline-block ">
               <Link to={"/login"}>
-                <HiOutlineLogin size={35} />
+                <HiOutlineLogin size={28} />
               </Link>
             </div>
 
             <div className="cart text-gray-500 hover:text-primary duration-200 dark:text-gray-400 inline-block">
               <a href="" onMouseEnter={() => setMiniCart(true)}>
-                <FaShoppingCart size={35} />
+                <FaShoppingCart size={28} />
               </a>
             </div>
             {/*  hover cart section */}
             {miniCart ? (
               <div
                 onMouseLeave={() => setMiniCart(false)}
-                className="hidden  2xl:block  hover_loginCart  rounded-xl h-[25rem] w-[40rem] border-non shadow-2xl absolute border-t-4 border-b-4 border-primary bg-white xl:left-[10%]  2xl:left-[15%]  top-16  z-20 "
+                className="hidden 2xl:block  hover_loginCart  rounded-xl h-[20rem] w-[32rem] border-none shadow-2xl absolute border-t-4 border-b-4 border-primary bg-white xl:left-[10%]  2xl:left-[15%]  top-16  z-20 "
               >
-                <div className="container relative h-full ">
-                  <div className="product  border-b-2 flex  pt-4 w-full">
+                <div className=" relative h-full ">
+                  <div className="product  border-b-2 flex  pt-4 w-full gap-4">
                     <div className="h-full items-start">
                       <Image
                         radius="lg"
                         src={product}
-                        className="object-cover container ml-3 rounded-xl h-[12rem] w-full  -translate-y-3  "
+                        className="object-cover ml-3 rounded-xl h-auto w-[10rem]  -translate-y-3  "
                       />
                     </div>
                     <div className="">
                     <div className="flex items-center font-semibold">
-                      <p className="font-medium text-lg px-2">
+                      <p className="font-medium text-sm px-2">
                         رم Corsair Vengeance DDR5 16GB Dual 5200MHz CL40 - Black
                       </p>
                     </div>
                     <div className="payment items-center px-2 py-3 flex justify-between ">
-                      <span className="font-bold text-2xl ">
+                      <span className="font-bold text-lg ">
                         {" "}
                         8٬300٬000 تومان
                       </span>
-                      <div className="border-t-2 border-b-2  border-primary flex gap-5  bg-white rounded-xl shadow-xl ">
+                      <div className="border-t-2 border-b-2  border-primary flex gap-3 ml-5  bg-white rounded-xl shadow-xl ">
                         <button
                           onClick={() => setCartValue(cartValue + 1)}
-                          className="p-2 text-3xl hover:cursor-pointer font-semibold"
+                          className="p-2 text-xl hover:cursor-pointer font-semibold"
                         >
                           +
                         </button>
-                        <p className="  content-center text-3xl">{cartValue}</p>
+                        <p className="  content-center text-xl">{cartValue}</p>
                         <button
                           onClick={(e) =>
                             itemCountLimit(setCartValue, cartValue)
                           }
-                          className="hover:cursor-pointer p-2 text-3xl font-semibold"
+                          className="hover:cursor-pointer p-2 text-xl font-semibold"
                         >
                           -
                         </button>
@@ -240,19 +240,19 @@ function Header({ isMenuVisible, setMenuVisible, setCartValue, cartValue }) {
                     </div>
                   </div>
 
-                  <div className="add_to_cart  absolute h-[5rem] flex justify-between container  bottom-0 z-30 px-10 pb-4 my-2   ">
+                  <div className="add_to_cart mb-1 absolute h-[5rem] flex justify-between container  bottom-0 z-30 px-6 pb-4 w-full   ">
                     <div className="">
-                      <p className="font-semibold text-xl  text-gray-600">
+                      <p className="font-semibold text-base  text-gray-600">
                         مبلغ قابل پرداخت
                       </p>
-                      <p className="font-semibold text-2xl  text-green-600">
+                      <p className="font-semibold text-xl  text-green-600">
                         8٬300٬000 تومان
                       </p>
                     </div>
-                    <button className=" btn  bg-primary  text-base  hover:bg-primary text-white px-20  py-9   rounded-lg  h-full  content-center">
-                      <span className="">مشاهده سبد خرید</span>
+                    <button className=" btn  bg-primary w-[17rem]   text-base  hover:bg-primary text-white px-16   py-2   rounded-lg  h-full  content-center">
+                      <span className=" text-sm">مشاهده سبد خرید</span>
                       <span>
-                        <FaCartArrowDown size={30} />
+                        <FaCartArrowDown size={20} />
                       </span>
                     </button>
                   </div>

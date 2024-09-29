@@ -132,9 +132,7 @@ function ProductPage(props) {
   function restMainImg() {
     document.querySelector(".main_box_img").src = manitor;
   }
-  function showImgBox() {
-    return <p className=" absolute m-auto ">dad</p>;
-  }
+
   
  /*  دریافت اطلاعات محصول از  */
   const { state } = useLocation(); 
@@ -424,24 +422,24 @@ function ProductPage(props) {
         <div className=" py-12 text-gray-500 text-center whyUsSection">
           <div className="grid grid-cols-5 font-semibold  bg-secondary p-5 rounded-xl  ">
             <div className="2xl:flex gap-4   col-span-1  mx-auto items-center  ">
-              <GoShieldLock className="text-primary xl:text-4xl text-2xl   md:text-3xl mx-auto  duration-200" />
-              <span className=" text-xs xl:text-lg   text-white">ضمانت اصالت کالا</span>
+              <GoShieldLock className="text-primary xl:text-4xl text-xl   md:text-3xl mx-auto  duration-200" />
+              <span className=" text-[7px]  xl:text-lg   text-white">ضمانت اصالت کالا</span>
             </div>
             <div className="2xl:flex gap-4  col-span-1  mx-auto  items-center  ">
-              <MdOutlineSupportAgent className="text-primary xl:text-4xl md:text-3xl text-2xl   mx-auto   duration-200" />
-              <span className="text-xs xl:text-lg text-white">پشتیبانی آنلاین</span>
+              <MdOutlineSupportAgent className="text-primary xl:text-4xl md:text-3xl text-xl    mx-auto   duration-200" />
+              <span className="text-[7px]  xl:text-lg text-white">پشتیبانی آنلاین</span>
             </div>
             <div className="2xl:flex gap-4 items-center   col-span-1  mx-auto ">
-              <FaRegCreditCard className="text-primary xl:text-4xl md:text-3xl text-2xl   mx-auto   duration-200" />
-              <span className="text-xs xl:text-lg  text-white">پرداخت امن</span>
+              <FaRegCreditCard className="text-primary xl:text-4xl md:text-3xl text-xl    mx-auto   duration-200" />
+              <span className="text-[7px]  xl:text-lg  text-white">پرداخت امن</span>
             </div>
             <div className="2xl:flex gap-4 items-center   col-span-1 mx-auto ">
-              <SlRocket className="text-primary xl:text-4xl md:text-3xl text-2xl   mx-auto   duration-200" />
-              <span className="  text-xs xl:text-lg  text-white">ارسال جی توربو</span>
+              <SlRocket className="text-primary xl:text-4xl md:text-3xl text-xl    mx-auto   duration-200" />
+              <span className="  text-[7px]  xl:text-lg  text-white">ارسال جی توربو</span>
             </div>
             <div className="2xl:flex gap-4 items-center  col-span-1 mx-auto  ">
-              <TfiLoop className="text-primary xl:text-4xl md:text-3xl text-2xl  mx-auto   duration-200" />
-              <span className=" xl:text-lg text-xs   text-white">امکان بازشگت کالا</span>
+              <TfiLoop className="text-primary xl:text-4xl md:text-3xl text-xl   mx-auto   duration-200" />
+              <span className=" xl:text-lg text-[7px]   text-white">امکان بازشگت کالا</span>
             </div>
           </div>
         </div>
@@ -486,22 +484,22 @@ function ProductPage(props) {
       </div>
       {/* payment card in mobile media query */}
       {/*  product advanced details */}
-      <div className="w-full py-12  ">
+      <div className="w-full py-12  bg-w">
         <div role="tablist" className="tabs tabs-lifted  tabs-lg  ">
           <input
             type="radio"
             name="my_tabs_2"
             role="tab"
-            className="tab focus:ring-transparent"
+            className="tab focus:ring-transparent mx-2 "
             aria-label="خصوصیات"
             defaultChecked
           />
           <div
             role="tabpanel"
-            className="tab-content bg-base-100 border-minSecondary rounded-box p-6 "
+            className="tab-content bg-white border-minSecondary rounded-box p-6 "
           >
             {/*  feature section */}
-            <div className=" py-10 ">
+            <div className=" py-10 bg-white">
               <h2 className="font-bold container pb-4 border-primary   border-r-4  text-lg">
                 خصوصیات
               </h2>
@@ -562,15 +560,15 @@ function ProductPage(props) {
             type="radio"
             name="my_tabs_2"
             role="tab"
-            className="tab focus:ring-transparent"
+            className="tab focus:ring-transparent mx-2"
             aria-label="نظرات"
           />
           <div
             role="tabpanel"
-            className="tab-content bg-base-100 border-minSecondary rounded-box p-6  "
+            className="tab-content bg-white border-minSecondary rounded-box p-6  "
           >
             {/*  Commends section */}
-            <div className="py-5 ">
+            <div className="py-5  bg-white">
               <div>
                 <h2 className="font-bold container pb-4 border-primary   border-r-4  text-lg">
                   نظرات
@@ -635,15 +633,15 @@ function ProductPage(props) {
             type="radio"
             name="my_tabs_2"
             role="tab"
-            className="tab focus:ring-transparent border-minSecondary "
+            className="tab focus:ring-transparent  mx-2 "
             aria-label="سوالات"
           />
           <div
             role="tabpanel"
-            className="tab-content bg-base-100 border-minSecondary rounded-box p-6  "
+            className="tab-content bg-white  border-minSecondary rounded-box p-6  "
           >
             {/*  questions section */}
-            <div className="py-10">
+            <div className="py-10 bg-white">
               <div>
                 <h2 className="font-bold container pb-4 border-primary  border-r-4  text-lg">
                   سوالات شما

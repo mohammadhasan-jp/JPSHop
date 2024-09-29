@@ -241,11 +241,11 @@ function mainCategory() {
   return (
     <>
       <div className="py-14">
-        <div className="grid grid-cols-5">
+        <div className="grid grid-cols-5 w-full">
           {/*  filters section */}
           <div className="col-span-1 text-center mx-1 hidden 2xl:block w-full">
             <div>
-              <div className="title py-4 text-3xl font-semibold">
+              <div className="title py-4 text-2xl font-semibold translate-x-5">
                 فیلتر کالا
               </div>
             </div>
@@ -257,40 +257,40 @@ function mainCategory() {
           {/*  product filtered section */}
           <div className="col-span-5  2xl:col-span-4 w-full">
             <div>
-              <ul className="flex py-4 gap-4   xl:gap-6  w-full xl:text-xl font-semibold items-center xl:mr-4 text-gray-500 rounded-2xl  ">
+              <ul className="flex py-4 gap-4 px-3  xl:gap-3  w-full xl:text-xl font-semibold items-center xl:mr-4 text-gray-500 rounded-2xl  ">
                 <li>
                   <h4 className="xl:text-xl text-xs text-black">
                     مرتب سازی بر اساس :
                   </h4>
                 </li>
                 <li className=" hidden xl:block hover:bg-primary hover:text-white p-2 rounded-md duration-300">
-                  <a href="" className="xl:text-lg text-sm">
+                  <a href="" className="xl:text-base text-sm">
                     کمترین قیمت
                   </a>
                 </li>
                 <li className=" hover:bg-primary hover:text-white p-2 rounded-md duration-300">
-                  <a href="" className="xl:text-lg text-sm">
+                  <a href="" className="xl:text-base text-sm">
                     بالاتری قیمت
                   </a>
                 </li>
                 <li className=" hover:bg-primary hover:text-white p-2 rounded-md duration-300">
-                  <a href="" className="xl:text-lg text-sm">
+                  <a href="" className="xl:text-base text-sm">
                     محبوب ترین ها
                   </a>
                 </li>
                 <li className=" hover:bg-primary hover:text-white p-2 rounded-md duration-300">
-                  <a href="" className="xl:text-lg text-sm">
+                  <a href="" className="xl:text-base text-sm">
                     پرفروش ترین
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="gap-5 grid grid-cols-4">
+            <div className="gap-3 grid grid-cols-4">
               {products.map((product, index) => (
                 <Card
                   id={index}
-                  className=" container col-span-4 lg:col-span-2 2xl:col-span-1  hover:border-primary border-2 duration-300 "
+                  className=" col-span-4 lg:col-span-2 2xl:col-span-1  hover:border-primary border-2 duration-300 "
                 >
                   <Link to={"/products/ProductPage"}>
                     <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
@@ -298,21 +298,21 @@ function mainCategory() {
                         {product.id ? <FaRegHeart /> : <FaHeart />}
                       </div>
                     </CardHeader>
-                    <CardBody className=" overflow-visible py-2 2xl:h-96 ">
+                    <CardBody className=" overflow-visible py-2 h-auto ">
                       <Image
                         radius="lg"
                         src={product.img}
-                        className="w-full object-cover container  px-5 xl:p-1 py-1 rounded-xl"
+                        className="w-full object-cover   px-9 xl:p-1 py-1 rounded-xl"
                       />
-                      <p className="text-base content-center font-semibold card-title px-4 pt-5 inline-block text-ellipsis text-gray-700 my-auto">
+                      <p className="text-sm content-center font-semibold card-title px-4 pt-5  text-gray-700 my-auto overflow-hidden h-[4rem] line-clamp-2 text-start text-ellipsis">
                         {product.name}
                       </p>
                     </CardBody>
-                    <CardFooter className="text-small justify-between px-5 pt-10">
-                      <span className="font-semibold text-xl border p-2 rounded-lg cursor-pointer duration-200 text-primary hover:bg-primary hover:text-white">
+                    <CardFooter className="text-small justify-between px-10 2xl:px-4 pt-10">
+                      <span className="font-semibold text-lg border p-2 rounded-lg cursor-pointer duration-200 text-primary hover:bg-primary hover:text-white">
                         <FiPlus />
                       </span>
-                      <p className="font-semibold text-xl">{product.price} ت</p>
+                      <p className="font-semibold text-xl xl:text-base">{product.price} ت</p>
                     </CardFooter>
                   </Link>
                 </Card>
@@ -354,20 +354,20 @@ function mainCategory() {
               <ModalContent>
                 {(onClose) => (
                   <>
-                    <ModalHeader className="flex flex-col gap-1 ">
+                    <ModalHeader className="flex justify-center gap-1 ">
                       فیلتر ها
                     </ModalHeader>
                     <ModalBody>
-                      <div className=" text-center rounded-2xl bg-white py-4 w-full   ">
+                      <div className=" text-center rounded-2xl  w-full   ">
                         <div className="w-full mx-auto px-4">
-                          <div className=" text-center rounded-2xl bg-white py-4 w-full   ">
+                          <div className=" text-center rounded-2xl  py-4 w-full   ">
                             {filters.map((filter) => (
                               <Accordion
                                 title={filter.name}
                                 content={
                                   <div className="form-control    gap-[1px]  ">
                                     {filter.items.map((item) => (
-                                      <label className="label cursor-pointer px-6">
+                                      <label className="label cursor-pointer px-6 ">
                                         <input
                                           type="checkbox"
                                           className="checkbox   text-4xl  checkbox-info "
@@ -384,20 +384,14 @@ function mainCategory() {
                           </div>
                         </div>
                       </div>
-                      <div className="filter-btn py-6   items-center flex justify-center  ">
-                        <button className="btn  text-2xl text-gray-600 font-semibold   w-full rounded-xl hover:bg-primary hover:text-white bg-white duration-300 ">
+                      <div className="filter-btn py-1   items-center flex justify-center  ">
+                        <button className="btn  text-2xl hover:text-primary font-semibold px-[10rem] rounded-xl bg-primary text-white hover:bg-white duration-300 ">
                           فیلتر
+                          <Radio value="bottom-center">bottom-center</Radio>
                         </button>
                       </div>
                     </ModalBody>
-                    <ModalFooter>
-                      <Button color="danger" variant="light" onPress={onClose}>
-                        Close
-                      </Button>
-                      <Button color="primary" onPress={onClose}>
-                        Action
-                      </Button>
-                    </ModalFooter>
+                  
                   </>
                 )}
               </ModalContent>
