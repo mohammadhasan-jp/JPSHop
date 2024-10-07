@@ -189,9 +189,9 @@ function Header({ isMenuVisible, setMenuVisible, setCartValue, cartValue }) {
             </div>
 
             <div className="cart text-gray-500 hover:text-primary duration-200 dark:text-gray-400 hidden  2xl:block ">
-              <a href="" onMouseEnter={() => setMiniCart(true)}>
+              <Link to={"/Cart"} onMouseEnter={() => setMiniCart(true)}>
                 <FaShoppingCart size={28} />
-              </a>
+              </Link>
             </div>
             {/*  hover cart section */}
             {miniCart ? (

@@ -103,7 +103,7 @@ function FullSetupProducts() {
             slidesPerView: 1,
           },
           1400: {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           1800: {
             slidesPerView: 3,
