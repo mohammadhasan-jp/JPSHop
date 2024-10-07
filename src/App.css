@@ -1,14 +1,12 @@
-*{
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scroll-secondary) var(--scroll-primary);
-}
+
 body{
 
   background-color: #F2F2F2;
 }
-
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
+}
 
 .swiper-container {
   width: 100%;
