@@ -7,7 +7,7 @@
 *{
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scrollbar-width: thin;
+  scrollbar-width:thin;
   scrollbar-color: var(--scroll-secondary) var(--scroll-primary);
   font-family: 'Shabnam', sans-serif;
 
