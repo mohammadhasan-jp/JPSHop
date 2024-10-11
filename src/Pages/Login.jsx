@@ -119,8 +119,8 @@ function Login() {
           {/*  main login section */}
           <div className="col-span-10 2xl:col-span-3 h-screen bg-white 2xl:bg-brandWhite">
             <div className="h-full w-full flex justify-center items-center  px-3  ">
-              <div className="xl:border  rounded-3xl 2xl:-translate-x-72  ">
-                <div className="flex w-[28rem]">
+              <div className="xl:border  rounded-3xl md:absolute right-[16%] ">
+                <div className="flex w-[26rem]">
                   <Card className="shadow-none 2xl:shadow-md px-[1rem] py-10 w-full">
                     <CardHeader className="py-5">
                       <h3 className=" w-full font-bold  text-center text-primary  text-3xl">
@@ -133,7 +133,7 @@ function Login() {
                           <h3 className=" px-3 py-3 w-full font-semibold  text-start  text-xl">
                             ورود و ثبت نام
                           </h3>
-                          <p className="px-2 font-semibold text-gray-500 text-base xl:text-sm text-start py-2 pt-4">
+                          <p className="px-2 font-semibold text-gray-500 text-xs xl:text-sm text-start py-2 pt-4">
                             سلام! لطفا شماره موبایل خود را وارد کنید
                           </p>
                           <input
@@ -146,13 +146,13 @@ function Login() {
                             {mobileError ? (
                               <p
                                 data-aos="fade-down"
-                                className="text-xs p-2 mx-1 w-fit text-start bg-red-500 text-white rounded-md pb-2  font-semibold  my-2 "
+                                className="text-xs p-2 mx-1  text-start bg-red-500 text-white rounded-md pb-2  font-semibold  my-2 "
                               >
                                 شماره موبایل را درست وارد کنید
                               </p>
                             ) : null}
                           </div>
-                          <p className="rools px-1 text-start  font-semibold  text-sm py-1">
+                          <p className="rools px-1 text-start   font-semibold  text-xs py-1">
                             ورود شما به معنای پذیرش{" "}
                             <a href="" className="text-primary">
                               شرایط جی پی شاپ
@@ -169,10 +169,10 @@ function Login() {
                           <h3 className=" px-3 py-3 w-full font-semibold  text-start  text-2xl">
                             ورود و ثبت نام
                           </h3>
-                          <p className="px-2 font-semibold text-gray-500 text-base xl:text-lg text-start py-2 pt-4">
+                          <p className="px-2 font-semibold text-gray-500 text-sm  text-start py-2 pt-4">
                             کد تایید به شماره موبایل {phoneNumber} ارسال شد
                           </p>
-                          <p className="px-2 font-semibold text-gray-500 text-base xl:text-lg text-start py-6 pt-4">
+                          <p className="px-2 font-semibold text-gray-500 text-sm    text-start py-6 pt-4">
                             لطفا کد اعتبار سنجی رو وارد کنید
                           </p>
                           <div
@@ -199,7 +199,7 @@ function Login() {
                         </div>
                       ) : (
                         <div>
-                          <p className="px-2 font-semibold text-gray-500 text-base xl:text-lg text-start py-1 pt-4">
+                          <p className="px-2 font-semibold text-gray-500 text-sm 3xl:text-lg text-start py-1 pt-4">
                             نام کاربری خود را وارد کنید :
                           </p>
                           <input
@@ -210,7 +210,7 @@ function Login() {
                             data-aos="fade-down"
                           />
 
-                          <p className="px-2 font-semibold text-gray-500 text-base xl:text-lg text-start py-1 pt-4">
+                          <p className="px-2 font-semibold text-gray-500 text-base 3xl:text-lg text-sm text-start py-1 pt-4">
                             رمز خود را وارد کنید :
                           </p>
                         <div className="flex  items-center relative">
@@ -316,7 +316,7 @@ function Login() {
                   <li className="step text-base">تکمیل خرید</li>
                 </ul>
               </div>
-              <p className="font-semibold text-brandWhite">
+              <p className="font-semibold text-brandWhite text-sm">
                 بعد از اهراز هویت میتونید جزو مشترکین ویژه شوید و از تخفیفات و
                 جشواره ها و محصولات جدید با خبر شوید{" "}
               </p>

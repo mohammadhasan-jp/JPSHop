@@ -61,28 +61,28 @@ function Cart() {
                     <div className='col-span-7 md:col-span-5  w-full  pt-11'>
 
                         {products.map((items,index)=>(
-                            <div key={index} className='bg-white mx-12 p-7
+                            <div key={index} className='bg-white lg:mx-12 p-7
                              rounded-xl shadow-lg mb-4'>
-                            <div className='grid grid-cols-5 w-full'>
-                                <div className='col-span-5 md:col-span-1 p-6 md:p-2'>
-                                    <Image src={items.img} className="w-full"></Image>
+                            <div className=' grid-cols-6 w-full grid'>
+                                <div className='col-span-2 md:col-span-2 px-2 md:px-10  md:w-full'>
+                                    <Image src={items.img} className=" w-full"></Image>
                                 </div>
-                                <div className='col-span-5 md:col-span-4  h-full  px-4 w-full'>
+                                <div className='col-span-4 md:col-span-4  h-full  px-4 w-full'>
                                     <div className='w-full'>
-                                        <h4 className='text-sm md:text-lg font-bold '>{items.name}</h4>
+                                        <h4 className='text-sm md:text-lg font-bold text-black'>{items.name}</h4>
                                     <div className="h-full  justify-between gird-cols-5">
-                                        <div className='details p-1 col-span-5 md:col-span-4 flex'>
+                                        <div className='details p-1  col-span-4 flex'>
                                             <div className='text-xs items-start w-full py-2'>
-                                                <p className="py-1  font-semibold">پنل: <span className='font-semibold text-gray-500'> IPS </span></p>
-                                                <p className="py-1 font-semibold">نرخ بروزرسانی :<span className='font-semibold text-gray-500'> 144 </span></p>
-                                                <p className="py-1 font-semibold">رزولیشن :<span className='font-semibold text-gray-500'> 1080p </span></p>
+                                                <p className="py-1 text-black  font-semibold">پنل: <span className='font-semibold text-gray-500 '> IPS </span></p>
+                                                <p className="py-1 text-black font-semibold">نرخ بروزرسانی :<span className='font-semibold text-gray-500 '> 144 </span></p>
+                                                <p className="py-1 text-black font-semibold">رزولیشن :<span className='font-semibold  text-gray-500'> 1080p </span></p>
                                                 <button className='text-primary bg-white  font-semibold flex gap-2 pt-2   outline-0 items-center text-sm  ' size='sm'  >
                                                 مشاهده کالا <FaLongArrowAltLeft />
                                             </button>
                                             </div>
-                                            <div className='payment   col-span-5 md:col-span-1 w-full  content-end md:my-auto '>
+                                            <div className='payment   col-span-1 w-full  content-end md:my-auto '>
                                            <div className='flex justify-end w-full gap-2'>
-                                           <span className='font-extrabold text-[20px] sm:text-3xl flex'>{items.price} <span className='text-gray-400 text-sm  pr-3'>تومان</span></span>
+                                           <span className='font-extrabold text-[20px] lg:text-3xl flex'>{items.price} <span className='text-gray-400 text-sm  pr-3'>تومان</span></span>
                                           
                                           <button  className=' duration-100   rounded-full text-danger px-1'>
                                           <TiDelete size={25}/>
@@ -106,10 +106,10 @@ function Cart() {
 
 
                     </div>
-                    <div className='col-span-7 md:col-span-2 h-screen w-full  '>
+                    <div className='col-span-7 md:col-span-2 h-full w-full pb-10 '>
 
                         <div>
-                            <div className="px-7 pt-10 ">
+                            <div className="px-[1rem] pt-10 ">
                                 <Card className="px-6 font-semibold shadow-lg ">
                                     <CardHeader className="border-b-1 py-5 text-gray-600">
                                     <FaFileInvoiceDollar />
