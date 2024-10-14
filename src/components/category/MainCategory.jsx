@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import CategoryFilters from "./CategoryFilters";
@@ -222,6 +222,7 @@ const products = [
   },
 ];
 function mainCategory() {
+  const [discount,setDiscount] = useState(false)
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [size, setSize] = React.useState("md");
 
@@ -237,6 +238,8 @@ function mainCategory() {
       });
     });
   }
+
+
 
   return (
     <>

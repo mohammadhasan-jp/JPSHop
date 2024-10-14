@@ -91,9 +91,7 @@ function NavbarMobile({ setCartValue, cartValue }) {
   const [visible, setVisible] = useState(false); // شروع به صورت مودال بسته
   const navigate = useNavigate(); // برای هدایت به صفحه سبد 
   const location = useLocation(); // برای تشخیص تغییر مسیر
-  useEffect(() => {
-    onClose(); // بستن مودال اگر مسیر تغییر کند
-  }, [location, onClose]);
+ 
 
   const handleCardClick = () => {
     onClose(); // بستن مودال

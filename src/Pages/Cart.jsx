@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, CardFooter, Divider, Image } from "@nextui-org/react";
+import { Link } from 'react-router-dom';
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { Button, ButtonGroup } from "@nextui-org/button";
 import { FaFileInvoiceDollar } from "react-icons/fa6";
@@ -135,7 +136,9 @@ function Cart() {
                                         </div>
                                         <div className='w-full font-semibold py-3'>
                                             <Button className='bg-primary text-white font-semibold  shadow-xl outline-0' size='lg' fullWidth radius='sm'>
-                                                پرداخت سفارش
+                                            <Link to={"/confirmPayment"}>
+                                            پرداخت سفارش
+                                            </Link>
                                             </Button>
                                         </div>
                                     </CardFooter>

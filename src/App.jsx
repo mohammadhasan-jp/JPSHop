@@ -23,6 +23,7 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import Login from "./Pages/Login.jsx";
 import { motion, useScroll } from "framer-motion"
 import Cart from "./Pages/Cart.jsx";
+import ConfirmPayment from "./Pages/ConfirmPayment.jsx";
 // ..
 AOS.init({
   // Global settings:
@@ -70,7 +71,8 @@ function Layout() {
             <Route path="/category" element={<Category  />} />
             <Route path="/products/ProductPage" element={<ProductPage />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/Cart" element={<Cart />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/confirmPayment" element={<ConfirmPayment />} />
           </Routes>
         </main>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { FiPlus } from "react-icons/fi";
@@ -8,6 +8,9 @@ import { FaHeart } from "react-icons/fa6";
 import fullSetUpImg from '../assets/case_1_975a824bbb.webp'
 import { Card,CardBody,CardHeader ,CardFooter,Image } from "@nextui-org/react";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
+ 
+
+
 
 
 const fullSetUp=[
